@@ -4,11 +4,21 @@ const store = require('./../store')
 
 const onCreateClimbSuccess = function (response) {
   $('#message').text(response.user.email + ' successfully created a climb!')
-  $('#sign-up').trigger('reset')
+  $('#climb').trigger('reset')
+  $('#message').removeClass()
+  $('#message').addClass('success-message')
+}
+
+// const onCreateClimbFailure
+
+const onUpdateClimbSuccess = function (response) {
+  $('#message').text(response.user.email + ' successfully upated a climb!')
+  $('#climb').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
 }
 
 module.exports = {
-  onCreateClimbSuccess
+  onCreateClimbSuccess,
+  onUpdateClimbSuccess
 }

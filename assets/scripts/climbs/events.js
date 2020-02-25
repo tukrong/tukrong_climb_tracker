@@ -9,11 +9,21 @@ const onCreateClimb = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.onCreateClimb(data)
-    .then(ui.onSignUpSuccess)
-    .catch(ui.onSignUpFailure)
+  api.createClimb(data)
+    .then(ui.onCreateClimbSuccess)
+    .catch(ui.onCreateClimbFailure)
 }
 
+const onUpdateClimb = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.updateClimb(data)
+    .then(ui.onUpdateClimbSuccess)
+    .catch(ui.onUpdateClimbFailure)
+}
 module.exports = {
-  onCreateClimb
+  onCreateClimb,
+  onUpdateClimb
 }

@@ -54,16 +54,27 @@
 
         <form id='climb'>
           <p>route name</p>
-          <input name='climb[route_name]' type='text' placeholder='Route name'>
+          <input id='routeName' name='climb[route_name]' type='text' placeholder='Route name'>
           <br>
-          <input name='climb[route_grade]' type='text' placeholder='Route grade'>
+          <input id='routeGrade' name='climb[route_grade]' type='text' placeholder='Route grade'>
           <br>
-          <input name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
+          <input id='numberTried'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
           <br>
-          <input name='climb[did_send]' type='text' placeholder='send?'>
+          <input id='didSend' name='climb[did_send]' type='text' placeholder='send?'>
           <br>
           <input type='submit' value='submit'>
+          <br>
+          <input id='updateClimb' type='submit' value='update'>
         </form>
+
+
+        <!-- <nav>
+          <div class=""></div>
+          <div class="nav-buttons">
+            <button id="getBooksButton" class="btn btn-info mr-2">Get climbs</button>
+            <button id="clearBooksButton" class="btn btn-outline-info">Clear climbs</button>
+          </div>
+        </nav> -->
 
 
     </body>

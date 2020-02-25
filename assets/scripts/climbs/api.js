@@ -2,24 +2,29 @@
 const store = require('./../store')
 const config = require('./../config')
 
-const createClimb = function () {
+const createClimb = function (data) {
   return $.ajax({
     url: config.apiUrl + '/climbs',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      climb: {
-        route_name: console.log(),
-        route_grade: console.log(),
-        number_of_tries: console.log(),
-        did_send: false
-      }
-    }
+    data: data
+  })
+}
+
+const updateClimb = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/climbs',
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
   })
 }
 
 module.exports = {
-  createClimb
+  createClimb,
+  updateClimb
 }
