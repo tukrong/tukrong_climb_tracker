@@ -14,4 +14,5 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#climb').on('submit', climbEvents.onCreateClimb)
   $('#updateClimb').on('submit', climbEvents.onUpdateClimb)
+  climbEvents.addHandlers()
 })

@@ -23,7 +23,35 @@ const onUpdateClimb = function (event) {
     .then(ui.onUpdateClimbSuccess)
     .catch(ui.onUpdateClimbFailure)
 }
+
+const onGetClimbs = (event) => {
+  event.preventDefault()
+  api.getClimbs()
+    .then(ui.getClimbsSuccess)
+    .catch(ui.getClimbsfailure)
+}
+
+const onClearClimbs = (event) => {
+  event.preventDefault()
+  ui.clearClimbs()
+}
+const onRemoveClimbs = (event) => {
+  const id = $(event.target).data('id')
+  console.log($(event.target))
+  api.removeClimbs(id)
+    .then(function () {
+      onGetClimbs(event)
+    })
+    .catch(ui.failure)
+}
+
+const addHandlers = () => {
+  $('#getClimbsButton').on('click', onGetClimbs)
+  $('#clearClimbsButton').on('click', onClearClimbs)
+  $('.content').on('click', '.remove-climb', onRemoveClimbs)
+}
 module.exports = {
   onCreateClimb,
-  onUpdateClimb
+  onUpdateClimb,
+  addHandlers
 }

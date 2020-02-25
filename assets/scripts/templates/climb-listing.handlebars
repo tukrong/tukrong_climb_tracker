@@ -1,20 +1,39 @@
- <!-- {{#each books as |book|}}
-  {{log book}}
-  <section data-id="{{book.id}}">
-    <h6>hello</h6>
+ {{#each climbs as |climb|}}
+  {{log climb}}
+  <section data-id="{{climb.id}}">
     <h3>
-      {{limit book.title 15}}
+      {{climb.data}}
     </h3>
-    <h6>Author:</h6>
-    <p>
-      {{#if book.author}}
-        {{book.author}}
+    <h6>hello</h6>
+    <p> Route name:
+      {{#if climb.route_name}}
+        {{climb.route_name}}
       {{else}}
-        No author provided.
+        No data provided.
       {{/if}}
     </p>
-    {{> partial}}
-    <button data-id="{{book.id}}" class="btn btn-danger remove-book">Remove book!</button>
+    <p> Route grade:
+      {{#if climb.route_grade}}
+        {{climb.route_grade}}
+      {{else}}
+        No data provided.
+      {{/if}}
+    </p>
+    <p> Number of tries:
+      {{#if climb.number_of_tries}}
+        {{climb.number_of_tries}}
+      {{else}}
+        No data provided.
+      {{/if}}
+    </p>
+    <p> Did send?
+      {{#if climb.did_send}}
+        {{climb.did_send}}
+      {{else}}
+        No data provided.
+      {{/if}}
+    </p>
+    <button data-id="{{climb.id}}" class="btn btn-danger remove-climb">Remove climb!</button>
   </section>
 
-{{/each}} -->
+{{/each}}

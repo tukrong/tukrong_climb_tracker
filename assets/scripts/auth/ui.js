@@ -22,9 +22,6 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-out').show()
   $('#change-password').show()
-  $('#gameBoard').hide()
-  $('#reset-game').show()
-  $('#startGameMessage').text('Press New Game to Start')
 }
 const onSignInFailure = function (response) {
   $('#message').text('fail to log in!')
@@ -44,11 +41,8 @@ const onSignOutSuccess = function (response) {
   $('#sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#gameBoard').hide()
-  $('#reset-game').hide()
   $('#change-password').trigger('reset')
   $('#sign-up').trigger('reset')
-  $('#gameStatus').hide()
   store.user = null
 }
 

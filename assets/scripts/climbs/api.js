@@ -24,7 +24,29 @@ const updateClimb = function (data) {
   })
 }
 
+const getClimbs = function () {
+  return $.ajax({
+    url: config.apiUrl + '/climbs',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const removeClimbs = function (id) {
+  return $.ajax({
+    url: `${config.apiUrl}/climbs/${id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    method: 'DELETE'
+  })
+}
+
 module.exports = {
   createClimb,
-  updateClimb
+  updateClimb,
+  getClimbs,
+  removeClimbs
+
 }
