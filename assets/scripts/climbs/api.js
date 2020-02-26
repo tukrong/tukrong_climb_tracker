@@ -15,7 +15,7 @@ const createClimb = function (data) {
 
 const updateClimb = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/climbs',
+    url: config.apiUrl + '/climbs/' + data.climb.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

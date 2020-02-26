@@ -22,6 +22,9 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-out').show()
   $('#change-password').show()
+  $('#climb').show()
+  $('#climbUpdate').show()
+  $('#climbsButtonHide').show()
 }
 const onSignInFailure = function (response) {
   $('#message').text('fail to log in!')

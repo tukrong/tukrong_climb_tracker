@@ -16,8 +16,7 @@ const onCreateClimb = function (event) {
 
 const onUpdateClimb = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
+  const data = getFormFields(event.target)
 
   api.updateClimb(data)
     .then(ui.onUpdateClimbSuccess)
@@ -37,7 +36,7 @@ const onClearClimbs = (event) => {
 }
 const onRemoveClimbs = (event) => {
   const id = $(event.target).data('id')
-  console.log($(event.target))
+  // console.log($(event.target))
   api.removeClimbs(id)
     .then(function () {
       onGetClimbs(event)
@@ -45,11 +44,16 @@ const onRemoveClimbs = (event) => {
     .catch(ui.failure)
 }
 
+// const showUpdateForm = (event) => {
+//   event.preventDefault()
+//   $('#update-modal').modal('show')
+// }
+
 const addHandlers = () => {
   $('#getClimbsButton').on('click', onGetClimbs)
   $('#clearClimbsButton').on('click', onClearClimbs)
   $('.content').on('click', '.remove-climb', onRemoveClimbs)
-  $('.content').on('click', '.update-climb', onUpdateClimb)
+  // $('.content').on('click', '.update-climb', showUpdateForm)
 }
 module.exports = {
   onCreateClimb,

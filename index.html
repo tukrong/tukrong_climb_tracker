@@ -43,7 +43,7 @@
           </fieldset>
         </form>
 
-        <form id='change-password'>
+        <form class="changePw" id='change-password'>
           <fieldset>
             <legend>Change password</legend>
               <input name='passwords[old]' type='password' placeholder='old password'>
@@ -59,19 +59,24 @@
         <form id='climb'>
           <p>route name</p>
           <input id='routeName' name='climb[route_name]' type='text' placeholder='Route name'>
-          <br>
           <input id='routeGrade' name='climb[route_grade]' type='text' placeholder='Route grade'>
-          <br>
           <input id='numberTried'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
-          <br>
           <input id='didSend' name='climb[did_send]' type='text' placeholder='send?'>
-          <br>
           <input type='submit' value='submit'>
-          <br>
-          <input id='updateClimb' type='submit' value='update'>
+        </form>
+        <br>
+        <form id='climbUpdate'>
+          <p>Update route</p>
+          <input id='routeID1' name='climb[id]' type='text' placeholder='Id'>
+          <input id='routeName1' name='climb[route_name]' type='text' placeholder='Route name'>
+          <input id='routeGrade1' name='climb[route_grade]' type='text' placeholder='Route grade'>
+          <input id='numberTried1'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
+          <input id='didSend1' name='climb[did_send]' type='text' placeholder='send?'>
+          <input type='submit' value='submit'>
         </form>
 
         <br>
+        <div id="climbsButtonHide">
             <nav>
               <div class="climbs">climb tracker</div>
               <div class="nav-buttons">
@@ -84,7 +89,28 @@
               </div>
           </main>
         </nav>
+      </div>
 
+        <!-- <div class="modalFade" id="update-modal" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="false">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <form id="climb-form">
+              <fieldset>
+                  <p>Update route</p>
+                  <input id='routeNameUpdate' name='climb[route_name]' type='text' placeholder='Route name'>
+                  <br>
+                  <input id='routeGradeUpdate' name='climb[route_grade]' type='text' placeholder='Route grade'>
+                  <br>
+                  <input id='numberTriedUpdate'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
+                  <br>
+                  <input id='didSendUpdate' name='climb[did_send]' type='text' placeholder='send?'>
+                  <button id='update-button'>submit</button>
+                </fieldset>
+              </form>
+          </div>
+        </div>
+      </div> -->
 
     </body>
 </html>
