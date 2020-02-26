@@ -49,6 +49,7 @@ const addHandlers = () => {
   $('#getClimbsButton').on('click', onGetClimbs)
   $('#clearClimbsButton').on('click', onClearClimbs)
   $('.content').on('click', '.remove-climb', onRemoveClimbs)
+  $('.content').on('click', '.update-climb', onUpdateClimb)
 }
 module.exports = {
   onCreateClimb,
