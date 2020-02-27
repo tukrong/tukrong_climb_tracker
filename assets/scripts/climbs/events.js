@@ -11,6 +11,9 @@ const onCreateClimb = function (event) {
 
   api.createClimb(data)
     .then(ui.onCreateClimbSuccess)
+    .then(function () {
+      onGetClimbs(event)
+    })
     .catch(ui.onCreateClimbFailure)
 }
 
