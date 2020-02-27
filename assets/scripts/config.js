@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://tukrong-climb-api.herokuapp.com',
+  production: 'https://tukrong-climb-api.herokuapp.com/',
   development: 'http://localhost:4741'
 }
 
