@@ -14,74 +14,90 @@
     <body>
 
         <nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">Climb Tracker</a>
+    <a class="navbar-brand">Climb Tracker</a>
 
   </nav>
       <p id='message'></p>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form class='sign-up-form' id='sign-up'>
+              <fieldset class='sign-up-form'>
+                <legend>Sign up</legend>
+                <input name='credentials[email]' type='email' placeholder='email@email.com' >
+                <br>
+                <input name='credentials[password]' type='password' placeholder='password'>
+                <br>
+                <input name='credentials[password_confirmation]' type='password' placeholder='password'>
+                <br>
+                <input type='submit' value='sign up' >
+              </fieldset>
+            </form>
+          </div>
+          <div class="col">
+            <form class='sign-in-form' id='sign-in'>
+              <fieldset>
+                <legend>Sign in here</legend>
+                  <input name='credentials[email]' type='email' placeholder='example@example.com'>
+                  <br>
+                  <input name='credentials[password]' type='password' placeholder='password'>
+                  <br>
+                  <input type='submit' value='sign in'>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
 
-      <form class='sign-up-form' id='sign-up'>
-        <fieldset class='sign-up-form'>
-          <legend>Sign up</legend>
-          <input name='credentials[email]' type='email' placeholder='email@email.com' >
-          <br>
-          <input name='credentials[password]' type='password' placeholder='password'>
-          <br>
-          <input name='credentials[password_confirmation]' type='password' placeholder='password'>
-          <br>
-          <input type='submit' value='sign up' >
-        </fieldset>
-      </form>
 
-        <form class='sign-in-form' id='sign-in'>
-          <fieldset>
-            <legend>Sign in here</legend>
-              <input name='credentials[email]' type='email' placeholder='example@example.com'>
-              <br>
-              <input name='credentials[password]' type='password' placeholder='password'>
-              <br>
-              <input type='submit' value='sign in'>
-          </fieldset>
-        </form>
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <form id='climb'>
+            <p>Route Name</p>
+            <input id='routeName' name='climb[route_name]' type='text' placeholder='Route name'>
+            <input id='routeGrade' name='climb[route_grade]' type='text' placeholder='Route grade'>
+            <input id='numberTried'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
+            <input id='didSend' name='climb[did_send]' type='text' placeholder='send?'>
+            <input type='submit' value='submit'>
+          </form>
+        </div>
+        <div class="col-6 col-md-4">
+          <form id='climbUpdate'>
+            <p>Update route</p>
+            <input id='routeID1' name='climb[id]' type='text' placeholder='Id'>
+            <input id='routeName1' name='climb[route_name]' type='text' placeholder='Route name'>
+            <input id='routeGrade1' name='climb[route_grade]' type='text' placeholder='Route grade'>
+            <input id='numberTried1'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
+            <input id='didSend1' name='climb[did_send]' type='text' placeholder='send?'>
+            <input type='submit' value='submit'>
+          </form>
+        </div>
+        <div class="col-6 col-md-4">
+          <form class="changePw" id='change-password'>
+            <fieldset>
+              <p>Change password</p>
+                <input name='passwords[old]' type='password' placeholder='old password'>
+                <input name='passwords[new]' type='password' placeholder='new password'>
+                <input type='submit' value='change password'>
+            </fieldset>
+          </form>
+        </div>
+      </div>
 
-        <form class="changePw" id='change-password'>
-          <fieldset>
-            <legend>Change password</legend>
-              <input name='passwords[old]' type='password' placeholder='old password'>
-              <input name='passwords[new]' type='password' placeholder='new password'>
-              <input type='submit' value='change password'>
-          </fieldset>
-        </form>
 
         <form id='sign-out'>
               <input type='submit' value='Sign out'>
         </form>
-
-        <form id='climb'>
-          <p>route name</p>
-          <input id='routeName' name='climb[route_name]' type='text' placeholder='Route name'>
-          <input id='routeGrade' name='climb[route_grade]' type='text' placeholder='Route grade'>
-          <input id='numberTried'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
-          <input id='didSend' name='climb[did_send]' type='text' placeholder='send?'>
-          <input type='submit' value='submit'>
-        </form>
         <br>
-        <form id='climbUpdate'>
-          <p>Update route</p>
-          <input id='routeID1' name='climb[id]' type='text' placeholder='Id'>
-          <input id='routeName1' name='climb[route_name]' type='text' placeholder='Route name'>
-          <input id='routeGrade1' name='climb[route_grade]' type='text' placeholder='Route grade'>
-          <input id='numberTried1'name='climb[number_of_tries]' type='text' placeholder='Number of tries'>
-          <input id='didSend1' name='climb[did_send]' type='text' placeholder='send?'>
-          <input type='submit' value='submit'>
-        </form>
+
 
         <br>
         <div id="climbsButtonHide">
             <nav>
-              <div class="climbs">climb tracker</div>
+              <div class="climbs">Climb Tracker</div>
               <div class="nav-buttons">
                 <button id="getClimbsButton" class="btn btn-info mr-2">Get climbs</button>
-                <button id="clearClimbsButton" class="btn btn-outline-info">Clear climbs</button>
+                <button id="clearClimbsButton" class="btn btn-info mr-2">Clear climbs</button>
             </div>
           <main>
               <div id="content" class="content">

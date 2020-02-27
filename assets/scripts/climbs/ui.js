@@ -8,6 +8,7 @@ const onCreateClimbSuccess = function () {
   $('#climb').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
+  $('#message').text('Climb created')
 }
 // $('#update-modal').modal('show')
 // const onCreateClimbFailure
@@ -24,6 +25,9 @@ const getClimbsSuccess = (data) => {
   const showClimbsHtml = showClimbsTemplate({ climbs: data.climbs })
   $('.content').append(showClimbsHtml)
   $('#message').text('you have created a building')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 
 const clearClimbs = () => {

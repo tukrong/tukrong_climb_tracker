@@ -6,6 +6,9 @@ const onSignUpSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 
 const onSignUpFailure = function (response) {
@@ -13,7 +16,11 @@ const onSignUpFailure = function (response) {
   $('#message').removeClass()
   $('#message').addClass('fail-message')
   $('#sign-up').trigger('reset')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
+
 const onSignInSuccess = function (response) {
   $('#message').text(response.user.email + ' successfully logged in!')
   $('#sign-in').trigger('reset')
@@ -25,18 +32,30 @@ const onSignInSuccess = function (response) {
   $('#climb').show()
   $('#climbUpdate').show()
   $('#climbsButtonHide').show()
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 const onSignInFailure = function (response) {
   $('#message').text('fail to log in!')
   $('#sign-in').trigger('reset')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 const onChangePasswordSuccess = function (response) {
   $('#message').text('change password!')
   $('#change-password').trigger('reset')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 const onChangePasswordFailure = function (response) {
   $('#message').text('fail to change password!')
   $('#change-password').trigger('reset')
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 const onSignOutSuccess = function (response) {
   $('#message').text('signed out!')
@@ -46,7 +65,13 @@ const onSignOutSuccess = function (response) {
   $('#sign-out').hide()
   $('#change-password').trigger('reset')
   $('#sign-up').trigger('reset')
+  $('#climb').hide()
+  $('#climbUpdate').hide()
+  $('#climbsButtonHide').hide()
   store.user = null
+  setTimeout(() => {
+    $('#message').fadeOut()
+  }, 1000)
 }
 
 module.exports = {
