@@ -5,6 +5,7 @@ const showClimbsTemplate = require('../templates/climb-listing.handlebars')
 
 const onCreateClimbSuccess = function () {
   // $('#message').text(response.user.email + ' successfully created a climb!')
+  $('#climb').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
   $('#message').text('Climb created')
@@ -13,6 +14,7 @@ const onCreateClimbSuccess = function () {
 // const onCreateClimbFailure
 
 const onUpdateClimbSuccess = function () {
+  $('#climbUpdate').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
 }
