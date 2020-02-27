@@ -29,8 +29,7 @@ const getClimbs = function () {
     url: config.apiUrl + '/climbs',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    method: 'GET'
+    }
   })
 }
 
