@@ -7,8 +7,16 @@ update a climb, and remove a climb. You also are able to view all of your climbs
 - [Deployed API](https://tukrong-climb-api.herokuapp.com/climbs)
 - [Deployed Client](https://tukrong.github.io/tukrong_climb_tracker/)
 
+GitHub repo-
+- https://github.com/tukrong/tukrong_climb_tracker
+
 ## Planning Story
 
+- Create the user authentication with back end.
+- Create the html page.
+- Let user be able to create a climb, update a climb, remove a climb and get all their climbs.
+- User should be able to log out.
+- User should be able to log back in and get all their climbs.
 
 
 ### User Stories
@@ -32,6 +40,8 @@ update a climb, and remove a climb. You also are able to view all of your climbs
 ### Unsolved Problems
 
 - Make the layout and design
+
+- I would like to make the person be able to get all their climbs and then just have an update button on each climbs to update their climbs.
 
 ## Images
 ![](/images/screenonefront.png)
