@@ -34,7 +34,7 @@ update a climb, and remove a climb. You also are able to view all of your climbs
 - Make the layout and design
 
 ## Images
+![](/images/screenonefront.png)
+![](images/screentwofront.png)
+![](images/screenthreefront.png)
 
----
-
-#### Wireframe:
