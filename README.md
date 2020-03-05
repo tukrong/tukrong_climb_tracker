@@ -9,7 +9,7 @@ update a climb, and remove a climb. You also are able to view all of your climbs
 
 GitHub repo-
 - https://github.com/tukrong/tukrong_climb_tracker
-
+- https://github.com/tukrong/tukrong_climb_api
 ## Planning Story
 
 - Create the user authentication with back end.
@@ -43,7 +43,7 @@ GitHub repo-
 
 - I would like to make the person be able to get all their climbs and then just have an update button on each climbs to update their climbs.
 
-## Images
+## Images/WireFrame
 ![](/images/screenonefront.png)
 ![](images/screentwofront.png)
 ![](images/screenthreefront.png)
