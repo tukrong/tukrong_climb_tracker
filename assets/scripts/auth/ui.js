@@ -25,6 +25,7 @@ const onSignUpFailure = function (response) {
 
 const onSignInSuccess = function (response) {
   $('#message').text(response.user.email + ' successfully logged in!')
+  $('#message').show()
   $('#sign-in').trigger('reset')
   store.user = response.user
   $('#sign-up').hide()
@@ -40,6 +41,7 @@ const onSignInSuccess = function (response) {
 }
 const onSignInFailure = function (response) {
   $('#message').text('fail to log in!')
+  $('#message').show()
   $('#sign-in').trigger('reset')
   setTimeout(() => {
     $('#message').fadeOut()
@@ -47,6 +49,7 @@ const onSignInFailure = function (response) {
 }
 const onChangePasswordSuccess = function (response) {
   $('#message').text('change password!')
+  $('#message').show()
   $('#change-password').trigger('reset')
   setTimeout(() => {
     $('#message').fadeOut()
@@ -54,6 +57,7 @@ const onChangePasswordSuccess = function (response) {
 }
 const onChangePasswordFailure = function (response) {
   $('#message').text('fail to change password!')
+  $('#message').show()
   $('#change-password').trigger('reset')
   setTimeout(() => {
     $('#message').fadeOut()
@@ -61,6 +65,7 @@ const onChangePasswordFailure = function (response) {
 }
 const onSignOutSuccess = function (response) {
   $('#message').text('signed out!')
+  $('#message').show()
   $('#sign-up').show()
   $('#sign-in').show()
   $('#change-password').hide()
